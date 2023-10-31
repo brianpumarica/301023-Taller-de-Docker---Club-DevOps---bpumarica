@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+  wordpress:
+    image: wordpress:latest
+    restart: always
+    ports:
+      - 8060:80
+    environment:
+      WORDPRESS_DB_HOST: mariadb
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: qwerty
+      WORDPRESS_DB_NAME: wordpress_1
+    volumes:
+      - ./wordpress:/var/www/html
+    networks:
+      - mynetwork
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - 3310:3306
+    networks:
+      - mynetwork
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_DATABASE: wordpress_1
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8061:8080
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    ipam:
+      config:
+        - subnet: 172.23.0.0/16
