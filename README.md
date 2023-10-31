@@ -6,7 +6,7 @@ Este repositorio es para una evaluación sobre Docker! 🐳
 
 [Ingrese al Resumen, haciendo click aquí](https://ten-shirt-728.notion.site/Docker-b13141cd284d4f3db86a8a52411d41f9?pvs=4)
 
-## Mi Proyecto Evaluativo
+## Proyecto Evaluativo, consigna:
 
 Generar un docker compose, para una aplicación Wordpress con todo lo necesario.
 
@@ -50,11 +50,15 @@ http://localhost:8061/
 ```
 
 Completar los siguientes campos:
+
 servidor=mariadb
+
 usuario=root
+
 contraseña=qwerty
+
 bd=wordpress_1
 
-Finalmente, visualizarás tu base de datos mariadb, con las tablas de wordpress (que anteriormente instalaste) desde la interfaz adminer.
+### Finalmente, visualizarás tu base de datos mariadb, con las tablas de wordpress (que anteriormente instalaste) desde la interfaz adminer.
 
-Brian Pumarica.
+### Brian Pumarica.
